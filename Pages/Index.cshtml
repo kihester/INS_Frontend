@@ -4,7 +4,127 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</br>
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title"> Important </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading"> You have 7 days left to send your application. <a class="govuk-notification-banner__link" href="#">View application</a>. </p>
+    </div>
 </div>
+
+
+<fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+            What is your address?
+        </h1>
+    </legend>
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+            Address line 1
+        </label>
+        <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+    </div>
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+            Address line 2 (optional)
+        </label>
+        <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+    </div>
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+            Town or city
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+    </div>
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+            Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+    </div>
+</fieldset>
+
+<button class="govuk-button" data-module="govuk-button">
+    Save and continue
+</button>
+
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+    <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Writing well for the web
+                </span>
+            </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <p class='govuk-body'>This is the content for Writing well for the web.</p>
+        </div>
+    </div>
+    <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                    Writing well for specialists
+                </span>
+            </h2>
+        </div>
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+            <p class='govuk-body'>This is the content for Writing well for specialists.</p>
+        </div>
+    </div>
+    <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                    Know your audience
+                </span>
+            </h2>
+        </div>
+        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            <p class='govuk-body'>This is the content for Know your audience.</p>
+        </div>
+    </div>
+    <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                    How people read
+                </span>
+            </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+            <p class='govuk-body'>This is the content for How people read.</p>
+        </div>
+    </div>
+</div>
+
+<table class="govuk-table">
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Rate for vehicles</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Rate for bicycles</th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">First 6 weeks</th>
+            <td class="govuk-table__cell">£109.80 per week</td>
+            <td class="govuk-table__cell">£59.10 per week</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Next 33 weeks</th>
+            <td class="govuk-table__cell">£159.80 per week</td>
+            <td class="govuk-table__cell">£89.10 per week</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total estimated pay</th>
+            <td class="govuk-table__cell">£4,282.20</td>
+            <td class="govuk-table__cell">£2,182.20</td>
+        </tr>
+    </tbody>
+</table>
