@@ -1,0 +1,32 @@
+﻿@model IEnumerable<INS_Frontend.Models.User>
+
+@{
+    ViewData["Title"] = "All";
+}
+<table class="govuk-table">
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">First Name</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Last Name</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Age</th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+        @foreach (var item in Model)
+        {
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    @Html.DisplayFor(modelItem => item.firstName)
+                </td>
+                <td class="govuk-table__cell">
+                    @Html.DisplayFor(modelItem => item.lastName)
+                </td>
+                <td class="govuk-table__cell">
+                    @Html.DisplayFor(modelItem => item.age)
+                </td>
+               
+            </tr>
+        }
+    </tbody>
+</table>

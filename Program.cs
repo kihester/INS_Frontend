@@ -20,4 +20,9 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
+
+app.MapControllerRoute(
+    name: "Users",
+    pattern: "{controller=User}/{action=All}");
+
 app.Run();
