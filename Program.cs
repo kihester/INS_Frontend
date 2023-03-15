@@ -2,8 +2,14 @@ using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSession(optiions =>
+{
+    optiions.IdleTimeout = TimeSpan.FromMinutes(60);
+});
 
 var app = builder.Build();
 
@@ -16,6 +22,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+
+app.UseSession();
 app.UseAuthorization();
 
 app.MapRazorPages();

@@ -10,11 +10,12 @@ namespace INS_Frontend.controllers
     {
 
         //Hosted web API REST Service base url
-        String Baseurl = "http://localhost:5172/";
+        String Baseurl = " http://localhost:5172";
 
         public async Task<ActionResult> All()
         {
             List<User> users = new List<User>();
+            var accessToken = HttpContext.Session.GetString("JWToken");
             using (var client = new HttpClient())
             {
                 //Passing service base url
@@ -22,6 +23,7 @@ namespace INS_Frontend.controllers
                 client.DefaultRequestHeaders.Clear();
                 //Define request data format
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
                 //Sending request to find web api REST service resource GetAllEmployees using HttpClient
                 HttpResponseMessage response = await client.GetAsync("User");
                 //Checking the response is successful or not which is sent using HttpClient

@@ -1,0 +1,30 @@
+﻿@model INS_Frontend.Models.UserLogin
+
+<h1 class="govuk-heading-l">
+    <span class="govuk-caption-l">Insolvency Service</span>
+    Sign in
+</h1>
+
+<form asp-action="LoginUser" asp-controller="Login">
+
+    <p  class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> @Html.Raw(ViewBag.Message)
+    </p>
+        <div class="govuk-form-group">
+        <label class="govuk-label" asp-for="Username">
+            Username
+            </label>
+        <input class="govuk-input govuk-!-width-one-half" asp-for="Username" />
+        </div>
+
+        <div class="govuk-form-group">
+        <label class="govuk-label" asp-for="Password">
+                Password
+            </label>
+        <input class="govuk-input govuk-!-width-one-half" type="password" asp-for="Password" />
+           
+        </div>
+    <div class="govuk-form-group">
+        <button type="submit" class="govuk-button" value="Login">Sign in</button>
+        </div>
+</form>
